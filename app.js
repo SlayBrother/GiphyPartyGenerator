@@ -30,9 +30,9 @@ $("form").on("submit", async function(e){
     let searchParam = $searchInput.val()
     $searchInput.val("")
 
-    const response = await axios.get('http://api.giphy.com/v1/gifs/search', {param:{
-        query: searchParam, 
-        api_key: "MhAodEJIJxQMxW9XqxKjyXfNYdLoOIym" 
+    const response = await axios.get('http://api.giphy.com/v1/gifs/search', {params:{
+        q: searchParam, 
+        api_key: "7WWiV11Uuv15u23Gg5qMiob9w4tr96rs" 
         }
     })
     addGif(response.data)
